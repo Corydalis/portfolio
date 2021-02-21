@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+	background: #2b2d42;
+	color: #fff;
+}
+
+section{
+	background: rgba{250, 210, 219, 1}
+}
+
+/******* word color setting ****/
+
+.blue{
+	color: #39f;
+}
+
+.orange{
+	color: #f47000;
+}
+
+.green{
+	color: #7EA966;
+}
+
+
+
+.port-top{
+	width: 100%;
+	height: 100vh;
+	display: inline-flex;
+	justify-content: center;
+}
+
+
+.port-top-words:first-child{
+	width: 30%;
+}
+
+.port-top-words{
+	width: 50%;
+	margin: 5em 0.5em 0;
+	height: 80vh;
+}
+
+.cord-scene{
+	background: #333;
+}
+
+.cord-scene:before{
+	width: 15%;
+	background: #333;
+	color: #fff;
+	height: 5vh;
+	display: block;
+	margin: 0 auto;
+	position: absolute;
+	top: 1.5em;
+	content: 'ABOUT_ME.summary';
+	font-size: 1.2em;
+	font-weight: 600;
+	padding: 1em 1.5em;
+	letter-spacing: 0.04em;
+	border-top-right-radius: 0.5em;
+}
+
+.port-top-words .ol-wrap{
+	font-size: 2em;
+	width: 90%;
+	margin: 1.3em auto;
+	display: block;
+}
+
+ol {
+  counter-reset: myOrderedListItemsCounter;
+	background: #333;
+}
+ol li {
+  list-style-type: none;
+  position: relative;
+}
+ol li:before {
+  counter-increment: myOrderedListItemsCounter;
+  content: counter(myOrderedListItemsCounter);
+  margin-right: .5em;
+}
+
+.port-top-words .ol-wrap li{
+	padding: 0.6em 0;
+}
+
+.port-top-words .ol-wrap li:before{
+	background: #333;
+	padding: 0.3em;
+	font-family: 'Bebas Neue', cursive;
+}
+
+
+.maden-wrap h2{
+	text-align: center;
+	margin: 1em auto;
+	font-size: 2.5em;
+	letter-spacing: 0.05em;
+}
+.port-btm{
+	width: 100%;
+}
+
+.port-wrap{
+	width: 100%;
+	margin: 4.5em 0;
+}
+
+.portImg, .portImg-mobile{
+	margin: 0.6em;	
+}
+
+.portImg{
+	width: 56.5%;
+}
+
+.portImg-mobile{
+	width: 20%;
+}
+
+.port-inner{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.port-img-wrap{
+	width: 100%;
+	
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.port-explain-box{
+	border: 1px solid;
+	width: 70%;
+	margin: 1em auto 2em;
+	padding: 2em;
+	line-height: 2;
+}
+
+.port-explain-box a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.port-explain-box a:visited{
+	color: #ffff;
+}
+
+footer{
+	background: #ed8c97;
+	padding: 5em;
+}
+
+footer h3{
+	text-align: center;
+	line-height: 2;
+	color: #fff;
+	letter-spacing: 0.5em;
+	font-size: 1.8em;
+}
+
+
+/************** device setting start *************/
+
+
+@media  screen 
+  and (min-width: 375px) 
+  and (max-width: 667px) 
+  and (orientation: portrait) { 
+	  .container,
+	  .port-top{
+		  width: 100%;
+	  }
+	  .mobile-hide{
+		  display: none;
+	  }
+	  
+	  .cord-scene{
+		  width: 100% !important;
+		  font-size: 1em;
+	  }
+	  
+	  .port-top-words{
+		  widtH: 100%;
+	  }
+	  
+	  .cord-scene:before{
+	width: 40%;
+	background: #333;
+	color: #fff;
+	height: 5vh;
+	display: block;
+	margin: 0 auto;
+	position: absolute;
+	top: 1.5em;
+	content: 'ABOUT_ME.summary';
+	font-size: 1em;
+	font-weight: 600;
+	padding: 1em 1.5em;
+	letter-spacing: 0.04em;
+	border-top-right-radius: 0.5em;
+}
+	  
+	  .port-img-wrap{
+		  width: 100%;
+	  }
+	  
+	  .port-img-wrap{
+		  width: 100%;
+		  display: block !important;
+	  }
+	  
+	  .port-img-wrap{
+		  		  display: block !important;
+
+	  }
+	  
+	  .portImg{
+		  width: 100%;
+	  }
+	  
+	  .portImg-mobile{
+		  width: 100%;
+		  display: block;
+		  margin: 0 auto;
+	  }
+	  
+	  .port-explain-box{
+		  width: 100%;
+	  }
+	  
+	  .port-wrap footer{}
+	  width: 100%;
+	  
+}
+}
