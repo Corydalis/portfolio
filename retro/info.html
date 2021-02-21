@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<!-- /*calc(var(--loader-width) * 0.7);*/-->
+	<head>
+		<title>YOUR RETRO</title>
+		<link rel="stylesheet" href="common.css">
+		<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Rubik&Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/2abc32f268.js" crossorigin="anonymous"></script>
+		<script src="js/common.js"></script>
+		<!--- react base -->
+		<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+	</head>
+	<body><div class="circle"></div>       
+		<div class="container">
+			<div class="wrapper first">
+				<div class="nav">
+				<ul class="drawer">
+					<li>
+						<a href="index.html">Main</a>
+					</li>
+					<li>
+						<a href="info.html">Info</a>
+					</li>
+					<li>
+						<a href="port.html">Portfolio</a>
+					</li>
+				</ul>
+				</div>
+				<div class="info-wrapper">
+					<h1>
+						LOLEM IPSUM
+					</h1>
+					<h3>
+						sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					</h3>
+				</div>
+			</div>
+			<div class="wrapper info-scnd-wrap">
+				<div class="info-wrapper info-wrapper-scnd">
+					<div class="info-card-txt-wrap">
+						<h1>
+						engineering header
+						</h1>
+						<h3 >
+							ㅇㅇㅇㅇㅇㅇ
+						</h3>
+						<p>
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						</p>
+					</div>
+					<div class="info-card-wrap">
+						<div class="info-card-img">
+							<img src="https://cdn.pixabay.com/photo/2016/03/04/19/36/gears-1236578_960_720.jpg">
+						</div>
+						<div class="info-card-img">
+							<img src="https://cdn.pixabay.com/photo/2016/03/04/19/36/gears-1236578_960_720.jpg">
+						</div>
+						<div class="info-card-img">
+							<img src="https://cdn.pixabay.com/photo/2016/03/04/19/36/gears-1236578_960_720.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="wrapper info-third-wrap">
+				<div class="info-wrapper info-wrapper-third">
+					<div class="info-third-txt-wrap">
+						<h1 class="hh">
+						Lolem Ipsum
+						</h1>
+					</div>
+					<div class="info-third-txt-wrap">
+						<p class="hh third-txt">
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						</p>
+						<p class="hh third-txt">
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="wrapper info-fourth-wrap">
+				<div class="info-wrapper info-wrapper-fourth">
+					<div class="info-fourth-txt-wrap">
+						<div class="fourth-line-l">
+							
+						</div>
+						<div class="fourth-line-r">
+							<h1 class=" info-fourth-going">
+								WHAT'S NEXT?
+							</h1>
+						</div>
+							
+					</div><!--
+					<div class="info-fourth-txt-wrap">
+
+					</div>-->
+				</div>
+			</div>
+		</div>
+		<script>
+			// horizontal scroll evt
+(function() {
+    function scrollHorizontally(event) {
+        event = window.event || e;
+        var delta = Math.max(-1, Math.min(1, (event.wheelDelta || -event.detail)));
+        document.documentElement.scrollLeft -= (delta*100); 
+        document.body.scrollLeft -= (delta*100); 
+        event.preventDefault();
+    }
+    if (window.addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        window.addEventListener("mousewheel", scrollHorizontally, false);
+        // Firefox
+        window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+    } else {
+        // IE 6/7/8
+        window.attachEvent("onmousewheel", scrollHorizontally);
+    }
+	
+	
+	
+
+$(window).on('load', function(){
+    
+        $('.hh').each( function(){
+            
+            var bottom_of_object = $(this).offset().left + $(this).outerWidth();
+            var bottom_of_window = $(window).scrollLeft() + $(window).width();
+            
+            if( bottom_of_window <= bottom_of_object ){
+				$('.hh').addClass('toLeft');
+				console.log('ddddde');
+            }
+        }); 
+	});
+	
+	
+	
+	
+})();
+
+			
+	
+			
+			
+			
+			
+			// Detect request animation frame
+var scroll = window.requestAnimationFrame ||
+             // IE Fallback
+             function(callback){ window.setTimeout(callback, 1000/60)};
+var elementsToShow = document.querySelectorAll('.wrapper'); 
+var elementsToShow2 = document.querySelectorAll('.hh'); 
+
+			
+function loop() {
+
+    Array.prototype.forEach.call(elementsToShow, function(element){
+      if (isElementInViewport(element)) {
+        element.classList.add('is-visible');
+      } else {
+        element.classList.remove('is-visible');
+      }
+    });
+	/*
+
+	Array.prototype.indexOf.call(elementsToShow2, function(element){
+      if (oho(element)) {
+        element.classList.add('toLeft');
+		  alert('d');
+      } else {
+        element.classList.remove('is-visible');
+      }
+    });*/
+	
+
+	
+	
+	
+    scroll(loop);
+
+}
+
+// Call the loop for the first time
+loop();
+			
+
+// Helper function from: http://stackoverflow.com/a/7557433/274826/*
+function isElementInViewport(el) {
+  // special bonus for those using jQuery
+ /* if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  const sibal = document.querySelectorAll('.info-card-wrap');
+  var test = sibal.getBoundingClientRect();*/
+  var rect = el.getBoundingClientRect();
+  return (
+    (rect.left <= 0
+      && rect.right >= 0)
+    ||
+    (rect.right >= (window.innerWidth || document.documentElement.clientWidth) &&
+      rect.left <= (window.innerWidth || document.documentElement.clientWidth))
+    ||
+    (rect.left >= 0 &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth))
+  );
+}
+
+			function oho(ee) {
+  // special bonus for those using jQuery
+/*  if (typeof jQuery === "function" && thisthis instanceof jQuery) {
+    thisthis = thisthis[1];
+  }*/
+  var ee = document.querySelectorAll('.hh');
+  var testt = ee.getBoundingClientRect();
+  return (
+    (testt.left <= 0
+      && testt.right >= 0)
+    ||
+    (testt.right >= (window.innerWidth || document.documentElement.clientWidth) &&
+      testt.left <= (window.innerWidth || document.documentElement.clientWidth))
+    ||
+    (testt.left >= 0 &&
+      testt.right <= (window.innerWidth || document.documentElement.clientWidth))
+  );
+}
+	
+			
+/*
+			
+var myScrollFunc = function() {
+
+	var scndWindow = window.innerWidth;
+	const elee = document.querySelectorAll('.info-card-txt-wrap');
+var scndWindow = window.scrollX + elee.clientWidth;
+  var xx =  elee.getBoundingClientRect();
+  if (xx <= scndWindow && xx >= scndWindow) {
+    console.log('yes'); alert('asdf');
+  } 
+	
+				
+
+};
+window.addEventListener("scroll", elementpart);*/
+			
+			
+			
+
+
+			
+/*
+function updateProgressBar(event) {
+  const { innerWidth, pageXOffset } = window;
+  const innerWidth = window;
+	const pageXOffset = window;
+  const scrollWidth = document.body.clientHeight - innerWidth;
+  const scrollProgress = `${pageXOffset / scrollWidth * 100}%`;
+  
+  document.querySelector('.progress').style.height = scrollProgress;
+}
+
+window.addEventListener('load', updateProgressBar)
+window.addEventListener('scroll', updateProgressBar)
+window.addEventListener('resize', updateProgressBar);
+*/
+			
+			// finished, progress bar start
+		/*	
+const progressBar = document.querySelector(".scroll-progress-bar");
+
+function getPercentage(dividend, divisor) {
+	return (dividend / divisor) * 100;
+}
+
+function updateProgress() {
+	const scrollableHeight = document.body.clientHeight - window.innerHeight;
+	const currentProgress = getPercentage(window.pageYOffset, scrollableHeight);
+
+	if (currentProgress <= 0) {
+		progressBar.style.width = "0%";
+	} else if (currentProgress >= 100) {
+		progressBar.style.width = "100%";
+	} else {
+		progressBar.style.width = currentProgress + "%";
+	}
+}
+
+document.addEventListener("scroll", updateProgress);
+window.addEventListener("resize", updateProgress);*/
+</script>
+		
+		
+		
+	</body>
+</html>
