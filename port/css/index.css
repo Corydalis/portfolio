@@ -255,4 +255,14 @@ footer h3{
 	  .port-wrap footer h3{
 	     letter-spacing: 0 !important;
 	  }
+	  
+	  	  .m-indent{
+		  text-indent: 1em;
+		  	display: inline-block;
+	  }
+	  
+	  .m-indent-more{
+		  text-indent: 1.5em;
+		  display: inline-block;
+	  }
 }
