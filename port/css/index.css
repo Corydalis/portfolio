@@ -195,12 +195,13 @@ footer h3{
 	  
 	  .cord-scene{
 		  width: 100% !important;
+		  height: auto !important;
 		  font-size: 0.9em;
 	  }
 	  
 	  .port-top-words{
 		  widtH: 100%;
-		  height: 75vh !important;
+		   height: auto !important;
 	  }
 	  
 	  .cord-scene:before{
@@ -265,5 +266,9 @@ footer h3{
 	  .m-indent-more{
 		  text-indent: 1.5em;
 		  display: inline-block;
+	  }
+	  
+	  .portImg, .portImg-mobile{
+		  margin: 0 !important;
 	  }
 }
