@@ -73,7 +73,7 @@ body::-webkit-scrollbar-thumb {
     }
     to {
      		position: relative;
-		left: -7%;
+		left: -5%;
     }
 }
 
@@ -114,7 +114,7 @@ color: #fff;
 position: absolute;
 	left: 60%;
 	transition: all .4s ease-in-out;
-    animation: splash 5s  forwards  ease-in-out;
+    animation: splash 2.5s  forwards  ease-in-out;
 }
 
 
