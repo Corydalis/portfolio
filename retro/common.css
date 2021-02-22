@@ -63,19 +63,17 @@ body::-webkit-scrollbar-thumb {
 @keyframes splash {
     from {
         opacity: 0;
-       /* transform: scale(0, 0);*/
 		position: relative;
 		left: -5%;
     }
     50% {
         opacity: 1;
-       /* transform: scale(1.1, 1.1);*/
 		position: relative;
 		left: 5%;
     }
     to {
-     /*   transform: scale(1, 1);*/		position: relative;
-		left: 3%;
+     		position: relative;
+		left: 5%;
     }
 }
 
