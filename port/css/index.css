@@ -250,5 +250,9 @@ footer h3{
 	  .port-wrap footer{
 	  width: 100%;
 	  padding: 0 !important;
-}
+	}
+	  
+	  .port-wrap footer h3{
+	     letter-spacing: 0 !important;
+	  }
 }
