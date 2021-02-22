@@ -195,11 +195,12 @@ footer h3{
 	  
 	  .cord-scene{
 		  width: 100% !important;
-		  font-size: 1em;
+		  font-size: 0.9em;
 	  }
 	  
 	  .port-top-words{
 		  widtH: 100%;
+		  height: 75vh !important;
 	  }
 	  
 	  .cord-scene:before{
