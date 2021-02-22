@@ -64,7 +64,7 @@ body::-webkit-scrollbar-thumb {
     from {
         opacity: 0;
 		position: relative;
-		left: 5%;
+		left: -10%;
     }
     50% {
         opacity: 1;
@@ -73,7 +73,7 @@ body::-webkit-scrollbar-thumb {
     }
     to {
      		position: relative;
-		left: 2%;
+		left: -7%;
     }
 }
 
@@ -114,7 +114,7 @@ color: #fff;
 position: absolute;
 	left: 60%;
 	transition: all .4s ease-in-out;
-    animation: splash 2s  forwards  ease-in-out;
+    animation: splash 5s  forwards  ease-in-out;
 }
 
 
