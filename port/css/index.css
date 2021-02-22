@@ -70,6 +70,9 @@ section{
 	letter-spacing: 0.04em;
 	border-top-right-radius: 0.5em;
 }
+.port-top-words h1{
+	font-size: 5.5em
+}
 
 .port-top-words .ol-wrap{
 	font-size: 2em;
