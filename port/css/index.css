@@ -81,6 +81,7 @@ section{
 	display: block;
 }
 
+
 ol {
   counter-reset: myOrderedListItemsCounter;
 	background: #333;
@@ -158,12 +159,18 @@ ol li:before {
 .port-explain-box a{
 	color: #fff;
 	text-decoration: none;
+	transition: all .3s ease-in-out;
 }
+
 
 .port-explain-box a:visited{
 	color: #ffff;
 }
 
+.port-explain-box a:hover{
+	color: #E66149;
+	transition: all .3s ease-in-out;
+}
 footer{
 	background: #ed8c97;
 	padding: 5em;
