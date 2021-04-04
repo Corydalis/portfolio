@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--[if lt IE 9]> 
+			<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script> 
+		<![endif]-->
+		<meta name="viewport" content="width=700, user-scalable=no">
+		<link type="text/css" rel="stylesheet" href="index.css" />
+		<title>NINE PLEX</title>
+	</head>
+<body>	
+<div id="imsi"></div>
+	<div id="wrap" class="show">
+	
+		<div class="loading" id="loading-wrap"><!--<div class="splashBox"></div>-->
+		<div class="loading_img"><img src="http://designview.me/05_yj/nineplex/app/assets/images/n_logo.png" alt="" id="loading-logo" onclick="changeContent();"></div>
+	
+	</div>
+</div>
+
+
+
+	<script>/*
+		window.setTimeout(function () {
+				document.getElementById('loading-logo').style.opacity="0";
+			}, 1000);
+	window.setTimeout(function () {
+	location.href = "index.html";
+	}, 2000);*/
+
+
+
+/*
+	document.getElementById('wrap').onclick = function(e){
+    //your handler here
+    location.href = "https://www.naver.com";
+    alert('dd');
+}
+
+document.getElementById('loading-logo').onclick = function changeContent() { 
+	/*location.href = "https://www.naver.com";*/
+/*    window.setTimeout(function () {
+	location.href = "https://www.naver.com";
+
+	const element = document.getElementById('wrap')
+
+element.classList.remove('splashBox'); 
+void element.offsetWidth; // trigger reflow
+element.classList.add('splashBox');  start animation
+	}, 2000);
+}
+    
+*/
+
+
+
+ 
+/*
+  Reference: https://css-tricks.com/restart-css-animation/
+*/
+
+/*
+	window.setTimeout(function () {
+	location.href = "index.html";
+	}, 2000);
+*/
+
+	const element = document.getElementById('wrap');
+	const load_wrap = document.getElementById('loading-wrap');
+	const sp = document.getElementById('imsi');
+
+element.addEventListener("click", function(e) {
+  e.preventDefault;
+
+
+    window.setTimeout(function () {
+	location.href = "https://www.naver.com";
+	 element.offsetWidth = element.offsetWidth;
+/*load_wrap.classList.toggle('splashBox');*/
+	},1500);
+
+    window.setTimeout(function () {
+/*load_wrap.classList.toggle('splashBox');*/
+
+sp.classList.add('hide');
+element.classList.remove('show');
+	},500);
+
+
+}, false);
+
+
+    	</script>
+</body>
+</html>
