@@ -11,14 +11,10 @@
 		<title>NINE PLEX</title>
 
 			  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
 	</head>
 <body>	
-<div id="imsi">
-	<div></div>
-	<div></div><div></div>
-	</div>
+<div id="imsi"></div>
 	<div id="wrap" class="show">
 		<div class="loading" id="loading-wrap"><!--<div class="splashBox"></div>-->
 		<div class="loading_img"><img src="http://designview.me/05_yj/nineplex/app/assets/images/n_logo.png" alt="" id="loading-logo" onclick="changeContent();"></div>
@@ -93,8 +89,8 @@ alert('dd;;');
 $(document).ready(function(){
 
 $( "#wrap" ).click(function() {
-	/*$('#wrap').fadeOut();
-  $( "#imsi").toggleClass( "hide" );*/
+  $( "#imsi").toggleClass( "transition" );
+
       window.setTimeout(function () {
 	location.href = "https://www.naver.com";
 	 element.offsetWidth = element.offsetWidth;
@@ -103,44 +99,22 @@ $( "#wrap" ).click(function() {
 });
 
 });
-		
-		
-		$(document).ready(function(){
-  var preLoderLi = $('.preload li'),
-      pageDiv = $('#imsi div'),
-      slideDown = new TimelineMax({paused : true}),
-      loading = new TimelineMax({paused : true , repeat : 2}),
-      slideUp = new TimelineMax({paused : true}),
-      loadAnimation = new TimelineMax({repeat : -1});
-  
-  slideDown.staggerTo(pageDiv , 0.5 ,{
-    bottom : "0%" ,
-    ease : Power2.easeIn
-  }, 0.2);
-  
-  loading.staggerFrom(preLoderLi, 0.5 ,{
-    y : -15,
-    autoAlpha : 0,
-    ease : Power1.easeIn
-  },0.2)
-  .staggerTo(preLoderLi , 0.5,{
-    y : 35,
-    autoAlpha : 0,
-    ease : Power1.easeIn
-  },0.1);
-  
-   slideUp.staggerTo(pageDiv , 0.5 ,{
-    bottom : "100%" ,
-    ease : Power2.easeOut
-  }, 0.2);
-  
-  
-  loadAnimation.add(slideDown.play(), 0.5)
-               .add(loading.play())
-               .add(slideUp.play());
-  
-  
+
+/* original 
+
+
+$(document).ready(function(){
+
+$( "#wrap" ).click(function() {
+	$('#wrap').fadeOut();
+  $( "#imsi").toggleClass( "hide" );
+      window.setTimeout(function () {
+	location.href = "https://www.naver.com";
+	 element.offsetWidth = element.offsetWidth;
+	},1500);
+
 });
+*/
 
     	</script>
 </body>
