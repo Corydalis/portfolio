@@ -13,7 +13,7 @@
 			  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
 	</head>
-<body>	<div class="transition"></div>
+<body>	
 <div id="imsi"></div>
 	<div id="wrap" class="show">
 		<div class="loading" id="loading-wrap"><!--<div class="splashBox"></div>-->
@@ -89,6 +89,7 @@ alert('dd;;');
 $(document).ready(function(){
 
 $( "#wrap" ).click(function() {
+	$('#wrap').hide();
   $( "#imsi").toggleClass( "hide" );
   alert('dd;;');
       window.setTimeout(function () {
