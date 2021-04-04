@@ -595,7 +595,7 @@ left: 0;
   width: 150%;
   height: 100%;
   transform: scaleX(0) skewX(-40deg);
-  transform-origin: left;
+  transform-origin: left;display: block;
 }
 
 .transition {	display: block;
