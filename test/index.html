@@ -89,7 +89,13 @@ alert('dd;;');
 $(document).ready(function(){
 
 $( "#wrap" ).click(function() {
-  $( "#imsi").toggleClass( "anim-trans" );
+  $( "#imsi").toggleClass( "hide" );
+  alert('dd;;');
+      window.setTimeout(function () {
+	location.href = "https://www.naver.com";
+	 element.offsetWidth = element.offsetWidth;
+	},1500);
+
 });
 
 });
