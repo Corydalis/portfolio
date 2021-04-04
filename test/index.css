@@ -588,7 +588,7 @@ left: 0;
 
 #imsi{
    background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-  z-index: 2;
+  z-index: 999;
   position: fixed;
   top: 0%;
   left: -25%;
