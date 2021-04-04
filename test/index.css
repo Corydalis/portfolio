@@ -574,8 +574,9 @@ left: 0;
 .show {
   opacity: 1; 
 }
+
 .hide {
-   background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  /* background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72, #a8eb12);*/
   transition: opacity 400ms;
 
   	animation-name: goIndex;	
@@ -584,6 +585,7 @@ left: 0;
 	height: 100vh;
 
 	display: block;
+	z-index: 999;
 }
 
 #imsi{
