@@ -654,3 +654,22 @@ left: 0;
      100%   { transform: skewX(-5deg) translateX(-50px);
  width:30%;z-index:1; box-shadow: none;}
 }
+
+
+
+#imsi div{
+  position:fixed;
+  background-color:#303030;
+  height:100%;
+  bottom:100%;
+  width:25%;
+}
+#imsi div:nth-child(1){
+  left:0px;  background-color:#303030;
+}
+#imsi div:nth-child(2){
+  left:50%;  background-color:#123456;
+}
+#imsidiv:nth-child(3){
+  left:100%;   background-color:#e1e1e1;
+}
