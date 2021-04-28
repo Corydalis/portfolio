@@ -3,7 +3,7 @@
 <!-- /*calc(var(--loader-width) * 0.7);*/-->
 	<head>
 		<title>YOUR RETRO</title>
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="css/common.css">
 		<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Rubik&Josefin+Sans:wght@700&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 </head>
-	<body onload="init()">
-		<article >
+	<body>
+		<article  >
 			<section class="depth-first">
 				<div class="container">
 					<div class="wrapper">
@@ -347,23 +347,74 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/common.js"></script>
  <script>// http://www.dte.web.id/2013/02/event-mouse-wheel.html
-$(window).on('mousewheel DOMMouseScroll', function(e) {
-  var dir,
-      amt = 100;
-  
-  e.preventDefault();
-  if(e.type === 'mousewheel') {
-    dir = e.originalEvent.wheelDelta > 0 ? '-=' : '+=';
-  }
-  else {
-    dir = e.originalEvent.detail < 0 ? '-=' : '+=';
-  }      
-      
-  $('html, body').stop().animate({
-    scrollTop: dir + amt
-  },500, 'linear');
-})
+function init(){
+	new SmoothScroll(document,120,12)
+}
 
+function SmoothScroll(target, speed, smooth) {
+	if (target === document)
+		target = (document.scrollingElement 
+              || document.documentElement 
+              || document.body.parentNode 
+              || document.body) // cross browser support for document scrolling
+      
+	var moving = false
+	var pos = target.scrollTop
+  var frame = target === document.body 
+              && document.documentElement 
+              ? document.documentElement 
+              : target // safari is the new IE
+  
+	target.addEventListener('mousewheel', scrolled, { passive: false })
+	target.addEventListener('DOMMouseScroll', scrolled, { passive: false })
+
+	function scrolled(e) {
+		e.preventDefault(); // disable default scrolling
+
+		var delta = normalizeWheelDelta(e)
+
+		pos += -delta * speed
+		pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
+
+		if (!moving) update()
+	}
+
+	function normalizeWheelDelta(e){
+		if(e.detail){
+			if(e.wheelDelta)
+				return e.wheelDelta/e.detail/40 * (e.detail>0 ? 1 : -1) // Opera
+			else
+				return -e.detail/3 // Firefox
+		}else
+			return e.wheelDelta/120 // IE,Safari,Chrome
+	}
+
+	function update() {
+		moving = true
+    
+		var delta = (pos - target.scrollTop) / smooth
+    
+		target.scrollTop += delta
+    
+		if (Math.abs(delta) > 0.5)
+			requestFrame(update)
+		else
+			moving = false
+	}
+
+	var requestFrame = function() { // requestAnimationFrame cross browser
+		return (
+			window.requestAnimationFrame ||
+			window.webkitRequestAnimationFrame ||
+			window.mozRequestAnimationFrame ||
+			window.oRequestAnimationFrame ||
+			window.msRequestAnimationFrame ||
+			function(func) {
+				window.setTimeout(func, 1000 / 50);
+			}
+		);
+	}()
+}
 </script> 
 	</body>
 </html>
